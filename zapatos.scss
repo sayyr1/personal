@@ -1,0 +1,255 @@
+/** Media Querie Mix*/
+@mixin MQ($size) {
+    @media only screen and (min-width: $size) {
+      @content;
+    }
+  }
+@import 'menu';
+@import 'social';
+@import 'products';
+/**Color Variables*/
+
+// Other colors
+$first_color:#3B062D;
+$second_color: #0A3B01;
+$third_color: #041E3B;
+$brand_card_color: #849d80;
+
+.logo {
+    width: 110px;
+}
+
+// html {
+//     background-color: inherit;
+//     width: 1400px;
+//     margin: 0 auto;
+// }
+body{
+     font-family: 'Poppins', sans-serif;
+}
+
+
+/**MAIN*/
+
+div.main {
+  background-color: $third_color;
+    height: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-top: -3rem;
+    @include MQ($large) {
+position: relative;  }
+}
+.main{
+  h1 {
+    position: absolute;
+    margin-top: 10rem;
+      text-align: center;
+      display: block;
+      color: white;
+      @include MQ($medium){
+        font-size: 3rem
+      }
+  }
+  h3{
+    color: $brand_card_color;
+    margin-top: 18rem;
+    position: absolute;
+    text-align: center;
+    display: block;
+    padding: 1.5rem;
+    @include MQ($medium){
+      margin-top: 20rem;
+      font-size: 2.5rem;
+    }
+
+  }
+}
+
+/**NAVIGATION*/
+div.icon{
+  span{
+    font-size: 4rem;
+    color: $brand_card_color;
+  }
+}
+div.links{
+  width: 100%;
+    background-color: $third_color;
+    border-radius: 1rem;
+
+  
+    li {
+      padding: 1rem 0;
+      a{
+        @include MQ($medium){
+          font-size: 2rem;
+        }
+        font-size: 1.5rem;
+        line-height: 2rem;
+
+      }
+    }
+}
+
+
+/** BRANDS CONTAINER*/
+div.presentation1{
+  @include MQ($large){
+    margin-top: 28rem;
+  }
+  margin-top: 27rem;
+  width: 100%;
+  height: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    @include MQ($medium){
+      grid-template-columns: auto auto;
+    }
+    row-gap: 8rem;
+}
+
+
+
+/**Card for brands*/
+  .container {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card1 {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 2s;
+      
+
+         img {
+          z-index: 10;
+          position: absolute;
+          transition: 0.5s;
+          @include MQ($medium){
+            width: 50%;
+          }
+          width: 50%;
+          color: white;
+          // pointer-event: none;
+          
+        }
+        &:hover{
+          img{
+            height: 100px;
+            width: 100px;
+            top: 10%;
+            right: 10%;
+            @include MQ($medium){
+              width: 40%;
+              height: auto;
+              right: -2%;
+            }
+          }
+        }
+        .circle {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          color: #fff;
+          overflow: hidden;
+          border-radius: 10px;
+          z-index: 5;
+
+          &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $brand_card_color;
+            clip-path: circle(120px at 50% 50%);
+            transition: 0.9s;
+            z-index: 10;
+          }
+        }
+
+      }
+  }
+  
+  .card1:hover .circle::before {
+    clip-path: circle(400px at 50% 50%);
+  }
+
+  .card1:hover .content {
+    opacity: 1;
+  }
+ 
+  .card1 .content {
+    position: absolute;
+    opacity: 0;
+    color: #fff;
+    top: 40px;
+    width: 200px;
+    left: 20px;
+    z-index: 20;
+    transition: 0.4s;
+  }
+
+
+  .content{
+  h5{
+      font-size: 2rem;
+      margin-top: -2rem;
+      @include MQ($medium){
+        font-size: 3rem;
+      }
+  } p {
+    @include MQ($medium){
+      margin-top: -4rem;
+      font-size: 1.2rem;
+    }
+    font-size: 15px;
+  }
+}
+  .content button {
+    width: 200px;
+    height: 35px;
+    border: none;
+    background-color: rgba(0,0,255,0.722);
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    @include MQ($medium){
+font-size: 1.2rem;   
+height: 50px;
+ }
+  }
+  .content button:hover {
+    background-color: #00f;
+  }
+
+/**Footer*/
+.social{
+  display: grid;
+  grid-auto-columns: auto;
+  justify-content: center;
+}
+.social-cube{
+align-content: center;}
+header, main, footer{
+  @include MQ($large){
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+body{
+  
+    background: linear-gradient($third_color, $first_color, $second_color);
+  
+}
