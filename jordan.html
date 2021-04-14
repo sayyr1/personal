@@ -10,8 +10,7 @@
   <link href="normalize.css" rel="stylesheet">
 
 
-  <!--SCRIPT LINKS-->
-  <script src="zapatos.js" defer></script>
+ 
 
   <!--FONTS LINKS-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -29,7 +28,7 @@
       </div>
 
       <div class="links">
-       <a href="index.html"> <img src="images/shoes_logo.png" class="logo"></a>
+        <a href="index.html"> <img src="images/shoes_logo.png" class="logo"></a>
         <ul>
           <li><a href="">Inicio</a></li>
           <li><a href="">Promociones</a></li>
@@ -39,7 +38,7 @@
       </div>
       <div class="main">
 
-        <h1>DISTRIBUIDOR DE CALZADO AL POR MAYOR Y MENOR</h1>
+        <h1>Nike </h1>
         <h3>Conoce Nuestras Marcas</h3>
       </div>
     </div>
@@ -47,95 +46,44 @@
   </div>
 
 </header>
-<main>
+<main class="nike">
+<!--Products Cards-->
+    <div class="productos">
+        <div class="box">
+          <div class="name">
+            <h2>Nike Air</h2>
+            <p>Al por Mayor: $60</p>
+            <p>Al por Menor: $50</p>
 
-  <!--CARDS-->
-  <div class="presentation1">
-    <section>
-      <div class="container">
-        <div class="card1">
-          <div class="circle">
-            <div class="content">
-              <h5>Zapatos Nike</h5>
-              <p>Click y conoce todos nuestros catálogos.</p>
-              <a href="nike.html">
-                <button>Catálogo y Precios</button>
-              </a>
-            </div>
           </div>
-          <img src="images/nike_logo.png" alt="nike">
-
+            <a href="https://api.whatsapp.com/send/?phone=%2B593983842004&text=Estoy+Interesado+en+este+producto.&app_absent=0" target="_blank" class="buy">Comprar</a>
+            <div class="circle"></div>
+            <img class="product" src="images/nike1.png" alt="product">
         </div>
-      </div>
-    </section>
+        <div class="box">
+            <div class="name">
+              <h2>Nike Air</h2>
+              <p>Al por Mayor: $60</p>
+              <p>Al por Menor: $50</p>
 
-    <section>
-
-      <div class="container">
-        <div class="card1">
-          <div class="circle">
-            <div class="content">
-              <h5>Dell Laptops</h5>
-              <p>Click y conoce todos nuestros productos.</p>
-              <button>Catálogo y Precios</button>
             </div>
-          </div>
-          <img src="images/adidas_logo.png" alt="adidas">
-
+            <a href="https://api.whatsapp.com/send/?phone=%2B593983842004&text=Estoy+Interesado+en+este+producto.&app_absent=0" target="_blank" class="buy">Comprar</a>
+            <div class="circle"></div>
+            <img class="product" src="images/nike2.png" alt="product">
         </div>
-      </div>
-    </section>
-    <section>
+        <div class="box">
+          <div class="name">
+            <h2>Nike Air</h2>
+            <p>Al por Mayor: $60</p>
+            <p>Al por Menor: $50</p>
 
-      <div class="container">
-        <div class="card1">
-          <div class="circle">
-            <div class="content">
-              <h5>Dell Laptops</h5>
-              <p>Click y conoce todos nuestros productos.</p>
-              <button>Catálogo y Precios</button>
-            </div>
           </div>
-          <img src="images/jordan_logo.png" alt="jordan">
-
+            <a href="https://api.whatsapp.com/send/?phone=%2B593983842004&text=Estoy+Interesado+en+este+producto.&app_absent=0" target="_blank" class="buy">Comprar</a>
+            <div class="circle"></div>
+            <img class="product" src="images/nike3.png"  alt="product">
         </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="card1">
-          <div class="circle">
-            <div class="content">
-              <h5>Dell Laptops</h5>
-              <p>Click y conoce todos nuestros productos.</p>
-              <button>Catálogo y Precios</button>
-            </div>
-          </div>
-          <img src="images/reebok_logo.png" alt="reebok">
-
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="card1">
-          <div class="circle">
-            <div class="content">
-              <h5>Dell Laptops</h5>
-              <p>Click y conoce todos nuestros productos.</p>
-              <button>Catálogo y Precios</button>
-            </div>
-          </div>
-          <img src="images/converse_logo.png" alt="converse">
-
-        </div>
-      </div>
-    </section>
-  </div>
+    </div>
 </main>
-
 <!-- FOOTER -->
 <footer>
   <div>
@@ -181,6 +129,15 @@
       </div>
     </section>
   </div>
+   <!--SCRIPT LINKS-->
+   <script src="zapatos.js"></script>
+   <script src="vanilla-tilt.min.js"></script>
+       <script>
+         VanillaTilt.init(document.querySelectorAll(".box"), {
+         max: 25,
+         speed: 400
+     });
+     </script>
 </footer>
 
 </html>
